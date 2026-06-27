@@ -5,6 +5,7 @@ import SearchBar from "@/components/SearchBar";
 import SnippetForm from "@/components/SnippetForm";
 import SnippetCard from "@/components/SnippetCard";
 import Pagination from "@/components/Pagination";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { fetchSnippets, createSnippet, deleteSnippet, Snippet, SnippetCreate } from "@/lib/api";
 
 const LIMIT = 6;
@@ -70,7 +71,10 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4 md:p-8 font-sans">
       <div className="max-w-6xl mx-auto space-y-8">
         
-        <header className="text-center py-10">
+        <header className="relative text-center py-10">
+          <div className="absolute top-0 right-0">
+            <ThemeSwitcher />
+          </div>
           <h1 className="text-5xl font-extrabold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-400">
             Snippet Vault
           </h1>
