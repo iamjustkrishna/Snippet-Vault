@@ -1,0 +1,23 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+
+# Ignore local database file
+*.db
+*.sqlite
+*.sqlite3
+
+# Ignore the frontend Next.js app to keep the backend image small
+web/
+
+# Ignore git and markdown files
+.git/
+.gitignore
+README.md
+test_endpoints.py
