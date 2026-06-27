@@ -14,7 +14,7 @@ export interface SnippetCreate {
   tags?: string;
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://snippet-vault-6ysy.onrender.com";
 
 export async function fetchSnippets(q: string = "", page: number = 1, limit: number = 10): Promise<Snippet[]> {
   const url = new URL(`${API_BASE_URL}/snippets/`);
